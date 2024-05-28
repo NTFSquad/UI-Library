@@ -25,6 +25,7 @@ local TweenTable = {
         TweenInfo.new(0.17, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0)
     }
 }
+
 local CreateTween = function(name, speed, style, direction, loop, reverse, delay)
     name = name
     speed = speed or 0.17
