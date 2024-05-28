@@ -2084,7 +2084,14 @@ function library:Init(key)
                 end
             end)
 
-            local ChatTextBox = Player.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
+            local ChatTextBox
+
+            if Player.PlayerGui.Chat then
+                ChatTextBox = Player.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
+            else
+                ChatTextBox = game.CoreGui.ExperienceChat.chatInputBar.Background.TextContainer.TextBoxContainer.TextBox
+            end
+
             if UserInputService.WindowFocused then
                 UserInputService.InputBegan:Connect(function(c, p)
                     if not p then
