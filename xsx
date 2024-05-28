@@ -1845,7 +1845,7 @@ function library:Init(key)
     
                 local ChatTextBox
 
-                if Player.PlayerGui.Chat then
+                if Player.PlayerGui:FindFirstChild("Chat") then
                     ChatTextBox = Player.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
                 else
                     ChatTextBox = game.CoreGui.ExperienceChat.chatInputBar.Background.TextContainer.TextBoxContainer.TextBox
@@ -2086,7 +2086,7 @@ function library:Init(key)
 
             local ChatTextBox
 
-            if Player.PlayerGui.Chat then
+            if Player.PlayerGui:FindFirstChild("Chat") then
                 ChatTextBox = Player.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
             else
                 ChatTextBox = game.CoreGui.ExperienceChat.chatInputBar.Background.TextContainer.TextBoxContainer.TextBox
